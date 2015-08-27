@@ -1,0 +1,76 @@
+Organization_Site,City,Country,Longitude,Latitude,Data_type,Age_range_low,Age_range_high,Numerator,Denominator,Percent,Population,Comments,Male,Female,Data_Year_Min,Data_Year_Max
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV incidence,15,49,,Unknown,0.020,NW province,,NR,NR,2010,2010
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV incidence,15,49,,Unknown,0.020,Per year,,NR,NR,2010,2010
+,,South Africa,-26.876571,26.664729,HIV incidence,18,35,16,221,0.070,High-risk population,,Yes,Yes,2007,2011
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV incidence,18,35,,,0.060,High-risk population,,Yes,No,2007,2011
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV incidence,18,35,,,0.100,High-risk population,,No,Yes,2007,2011
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV incidence,18,49,4,80,0.050,Low-risk population,,Yes,Yes,2004,2009
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV incidence,18,49,,,0.020,Low-risk population,,Yes,No,2004,2009
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV incidence,18,49,,,0.060,Low-risk population,,No,Yes,2004,2009
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,15,49,135,462,0.290,ANC population,,No,Yes,2012,2012
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,15,49,,Unknown,0.300,,,NR,NR,2012,2012
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,18,22,3,124,0.020,Community,,NR,NR,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,18,52,24,357,0.070,Community,,NR,NR,2015,2015
+,,South Africa,-26.876571,26.664729,HIV prevalence,20,65,,Unknown,0.310,,,Yes,No,2012,2012
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,20,65,,Unknown,0.270,,,No,Yes,2012,2012
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,23,27,9,147,0.060,Community,,NR,NR,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,28,32,7,65,0.110,Community,,NR,NR,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,33,37,4,16,0.250,Community,,NR,NR,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,38,42,0,4,0.000,Community,,NR,NR,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,43,47,1,1,1.000,Community,,NR,NR,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,48,52,0,0,0.000,Community,,NR,NR,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,999,999,,Unknown,0.340,ANC population,,NR,NR,2009,2009
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,999,999,512,1668,0.310,"
+Gold miners",,Yes,No,2000,2001
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,999,999,357,1111,0.320,"
+Gold miners",,Yes,No,2003,2004
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,999,999,374,1426,0.260,"
+Miners
+VCT",,NR,NR,2003,2003
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,HIV prevalence,999,999,368,921,0.400,"
+VCT",30-39 is peak age group,No,Yes,2006,2008
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,18,22,78,124,0.630,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,18,52,254,357,0.710,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,23,27,105,147,0.710,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,28,32,52,65,0.800,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,33,37,14,16,0.880,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,38,42,4,4,1.000,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,43,47,1,1,1.000,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,LTBI prevalence - IGRA,48,52,0,0,0.000,Community,,Yes,Yes,2015,2015
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,TB incidence,0,100,3916,"408,375",0.010,Notified cases,CDR is 72%,NR,NR,2011,2011
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,TB incidence,0,100,6611,"695,933",0.010,"
+Notified cases",,NR,NR,2010,2010
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,TB incidence,0,100,3871,"408,375",0.010,Notified cases,CDR is 72%,NR,NR,2012,2012
+Aurum (Klerksdorp),Klerksdorp,South Africa,-26.876571,26.664729,TB incidence,0,999,,Unknown,0.010,"
+HIV-",,No,Yes,2012,2012
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,HIV prevalence,0,999,,Unknown,0.000,"
+Incident TB cases?",,NR,NR,2014,2014
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB incidence,0,100,,Unknown,0.000,,,NR,NR,2014,2014
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB incidence,15,100,,Unknown,0.000,,,NR,NR,2014,2014
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,12,0,"220,000",0.000,SS+ TB,,NR,NR,2011,2011
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,12,0,"116,377",0.000,SS+ TB,,NR,NR,2012,2012
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,12,0,"220,000",0.000,SS+ TB,,NR,NR,2013,2013
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,12,0,"220,000",0.000,SS+ TB,,NR,NR,2014,2014
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,100,80,"220,000",0.000,SS+ TB,,NR,NR,2011,2011
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,100,75,"116,377",0.000,SS+ TB,,NR,NR,2012,2012
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,100,86,"220,000",0.000,SS+ TB,,NR,NR,2013,2013
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,0,100,50,"220,000",0.000,SS+ TB,,NR,NR,2014,2014
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,12,18,6,"220,000",0.000,SS+ TB,,NR,NR,2011,2011
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,12,18,3,"116,377",0.000,SS+ TB,,NR,NR,2012,2012
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,12,18,5,"220,000",0.000,SS+ TB,,NR,NR,2013,2013
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,12,18,2,"220,000",0.000,SS+ TB,,NR,NR,2014,2014
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,15,100,52,3834,0.010,SS+ TB,,NR,NR,2013,2013
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,15,100,101,"106,000",0.000,SS+ TB,,NR,NR,2013,2013
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,19,44,30,"220,000",0.000,SS+ TB,,NR,NR,2011,2011
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,19,44,29,"116,377",0.000,SS+ TB,,NR,NR,2012,2012
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,19,44,32,"220,000",0.000,SS+ TB,,NR,NR,2013,2013
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,19,44,18,"220,000",0.000,SS+ TB,,NR,NR,2014,2014
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,45,100,44,"220,000",0.000,SS+ TB,,NR,NR,2011,2011
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,45,100,43,"116,377",0.000,SS+ TB,,NR,NR,2012,2012
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,45,100,49,"220,000",0.000,SS+ TB,,NR,NR,2013,2013
+"iccdr,b (Matlab)",Matlab,Bangladesh,,,TB prevalence,45,100,30,"220,000",0.000,SS+ TB,,NR,NR,2014,2014
+SATVI_test,Klerksdorp,South Africa,,,HIV incidence,,,,,,,,,,,
+Emavundleni,Cape Town,South Africa,-33.993673,18.595306,HIV incidence,,,,,,,,,,,
+Tygerburg,Cape Town,South Africa,-33.911279,18.611838,HIV incidence,,,,,,,,,,,
+Emavundleni,Cape Town,South Africa,-33.993673,18.595306,HIV incidence,,,,,,,,,,,
+Emavundleni,Cape Town,South Africa,-33.993673,18.595306,TB incidence,,,,,,,,,,,
