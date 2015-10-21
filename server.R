@@ -1,10 +1,17 @@
 #read in leaflet library
-#library(leaflet)
+library(leaflet)
+
+# read in sp package
+library(sp)
 
 #read in csv file
 data_server = read.csv("data/esfu_app_data.csv", stringsAsFactors = FALSE, fileEncoding='latin1')
 data_server = data_server[order(data_server$Organization_Site),]
 data_server$data <- data_server$Percent * 100
+
+# read in maps data
+x = readRDS('data/ZAF_adm1.rds')
+x@data$density = c(1,2,3,4,5,6,7,8,9,10)
 
 
 shinyServer(function(input, output, session) {
@@ -319,6 +326,42 @@ output$download_subset_data2 = downloadHandler (
     write.table(calc_subset(), file, sep = ",",append=TRUE, row.names = FALSE)  
   } 
 )
+############################################################# map stuff
+# plot
+
+# next step
+# figure out how to add polygon with style using function
+style = function(m) {
+  style_list = c(m, color = "#2ca25f", fill = FALSE)
+  return(style_list)
+}
+
+getColor = function(density){
+  if (density < 2){
+    return("#800026")
+  }
+  else if (density< 5){
+    return ("#BD0026")
+  }
+  else if (density < 8) {
+    return("#FC4E2A")
+  }
+  else {
+    return("#FED976")
+  }
+}
+
+output$testplot = renderLeaflet({
+  m = leaflet(x)
+  m = addTiles(m)
+ 
+  m = addPolygons(m, color = "#000", opacity = 0.8, fillOpacity = 0.2, fillColor = getColor(x@data$density))
+  
+ # m = clearBounds(m)
+  
+  #m = addMarkers(m, lng=174.768, lat=-36.852, popup="The birthplace of R")
+  m   
+})
 
 
   # map stuff

@@ -1,8 +1,8 @@
-#library(leaflet)
+library(leaflet)
+library(RColorBrewer)
 #read in csv file
 data = read.csv("data/esfu_app_data.csv", stringsAsFactors = FALSE, fileEncoding='latin1')
 data = data[order(data$Country),]
-
 
 shinyUI(fluidPage(theme = "bootstrap.css",
   #css to hide error messages
@@ -79,6 +79,7 @@ shinyUI(fluidPage(theme = "bootstrap.css",
               dataTableOutput('data_table'),
               
               br(),
+              leafletOutput('testplot'),
               hr(),
               downloadButton('download_subset_data', 'Download Spreadsheet of Selected Data')
             ),
