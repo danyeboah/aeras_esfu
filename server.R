@@ -4,6 +4,12 @@ library(leaflet)
 # read in sp package
 library(sp)
 
+#read in color brewer
+library(RColorBrewer)
+
+# read in magrittr package
+library(magrittr)
+
 #read in csv file
 data_server = read.csv("data/esfu_app_data.csv", stringsAsFactors = FALSE, fileEncoding='latin1')
 data_server = data_server[order(data_server$Organization_Site),]
@@ -11,7 +17,7 @@ data_server$data <- data_server$Percent * 100
 
 # read in maps data
 x = readRDS('data/ZAF_adm1.rds')
-x@data$density = c(1,2,3,4,5,6,7,8,9,10)
+x$density = c(1,2,3,4,5,6,7,8,9,10)
 
 
 shinyServer(function(input, output, session) {
@@ -202,29 +208,42 @@ headers = c('Site', 'Country','Min Age', 'Max Age','Data (%)', 'Comments','Data 
   resetting = observeEvent(input$Reset_button, {
     updateSelectInput(session, "country_selection",selected = "All Countries")
     updateSelectInput(session, "country_selection2",selected = "All Countries")
+    updateSelectInput(session, "country_selection3",selected = "Select Country")
+    
     
     updateSelectInput(session, "site_selection",selected = "All Sites in Selected Countries")
      
     updateSelectInput(session, "data_type",selected = "Select DataType")
     updateSelectInput(session, "data_type2",selected = "Select DataType")
+    updateSelectInput(session, "data_type3", selected = "Select DataType")
     
     updateSelectInput(session, "population",selected = "All available")
     updateSelectInput(session, "population2",selected = "All available")
+    updateSelectInput(session, "population3",selected = "All available")
     
     updateSelectInput(session, "tb_type",selected = "All available")
-    updateSelectInput(session, "tb_type",selected = "All available")
+    updateSelectInput(session, "tb_type2",selected = "All available")
+    updateSelectInput(session, "tb_type3",selected = "All available")
+    
     
     updateSliderInput(session, "Age_range", value = c(0,100))
     updateSliderInput(session, "Age_range2", value = c(0,100))
+    updateSliderInput(session, "Age_range3", value = c(0,100))
+    
     
     updateDateRangeInput(session, "Date_range", start = "1970-01-01", end = Sys.Date())
     updateDateRangeInput(session, "Date_range2", start = "1970-01-01", end = Sys.Date())
+    updateDateRangeInput(session, "Date_range3", start = "1970-01-01", end = Sys.Date())
     
     updateCheckboxInput(session, "age_checkbox", value = 0)
     updateCheckboxInput(session, "age_checkbox2", value = 0)
+    updateCheckboxInput(session, "age_checkbox3", value = 0)
+    
     
     updateNumericInput(session, "search_num1", value = 0)
     updateNumericInput(session, "search_num2", value = 0)
+    updateNumericInput(session, "search_num3", value = 0)
+    
   
   })
   
@@ -327,41 +346,42 @@ output$download_subset_data2 = downloadHandler (
   } 
 )
 ############################################################# map stuff
-# plot
+####### map data selection
+# select datatype based on selected countries
+output$data_typing3 = renderUI({
+  data = data_server
+  if (input$country_selection3 != "Select Country"){
+    data = data[data$Country == input$country_selection3,]
+  }
+  selectInput("data_type3", "Data Type",choices = c('Select DataType', unique(data$Data_type)), selected = 'Select DataType')
+})
 
-# next step
-# figure out how to add polygon with style using function
-style = function(m) {
-  style_list = c(m, color = "#2ca25f", fill = FALSE)
-  return(style_list)
-}
 
-getColor = function(density){
-  if (density < 2){
-    return("#800026")
-  }
-  else if (density< 5){
-    return ("#BD0026")
-  }
-  else if (density < 8) {
-    return("#FC4E2A")
-  }
-  else {
-    return("#FED976")
-  }
-}
 
-output$testplot = renderLeaflet({
+
+output$map_plot = renderLeaflet({
+  binpal = colorBin("YlOrRd", x$density, 10)
+  pops = paste(sep = "<br/>", x$NAME_1, "TB incidence",x$density)
+  
   m = leaflet(x)
   m = addTiles(m)
  
-  m = addPolygons(m, color = "#000", opacity = 0.8, fillOpacity = 0.2, fillColor = getColor(x@data$density))
-  
- # m = clearBounds(m)
-  
-  #m = addMarkers(m, lng=174.768, lat=-36.852, popup="The birthplace of R")
+  m = addPolygons(m, color = "black", fillColor = ~binpal(x$density), fillOpacity = 1, popup = pops)
+  m = addLegend(m, "bottomright", pal = binpal, values = ~x$density, title = "TB incidence", opacity = 1)
   m   
 })
+
+
+# code to update map
+#observe({
+#  binpal = colorBin("YlOrRd", x$density, 10)
+#  pops = paste(sep = "<br/>", x$NAME_1, "TB incidence",x$density)
+  
+#  leafletProxy("map_plot",
+#               data = x) %>%
+#              addPolygons(m, color = "black", fillColor = ~binpal(x$density), fillOpacity = 1, popup = pops) %>%
+#              addLegend(m, "bottomright", pal = binpal, values = ~x$density, title = "TB incidence", opacity = 1)
+#})
 
 
   # map stuff

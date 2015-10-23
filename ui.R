@@ -25,6 +25,15 @@ shinyUI(fluidPage(theme = "bootstrap.css",
             sidebarPanel(
             
               tabsetPanel(
+                tabPanel('Maps',
+                         selectInput("country_selection3", "Select Country", choices = c("Select Country",unique(data$Country))),
+                         uiOutput('data_typing3'),
+                         radioButtons("sex3", "Gender", unique(data$Gender)),
+                         sliderInput("Age_range3", label = "Age Range", min = 0, 
+                                     max = 100, value = c(0, 100)),
+                         checkboxInput("age_checkbox3", label = "Exclude data for all ages [0 - 100]", value = FALSE),
+                         dateRangeInput("Date_range3", label = "Date range", start = "1900", format = "yyyy")  
+                ),
                 tabPanel('View Data',
           # add option to select countries of interest
            selectInput("country_selection", "Select Countries", choices = c("All Countries",unique(data$Country)), multiple = TRUE, selected = "All Countries"),             
@@ -51,13 +60,15 @@ shinyUI(fluidPage(theme = "bootstrap.css",
                                      max = 100, value = c(0, 100)),
                          checkboxInput("age_checkbox2", label = "Exclude data for all ages [0 - 100]", value = FALSE),
                          dateRangeInput("Date_range2", label = "Date range", start = "1900", format = "yyyy")                         
-                )         
+                )
+          
+               
               )
            ),
           
           mainPanel(
             conditionalPanel(
-              condition = "input.data_type != 'Select DataType'",
+              condition = "input.data_type != 'Select DataType' && input.data_type3 == 'Select DataType' && (typeof input.data_type !== 'undefined')",
               htmlOutput('data_type_info'),
               tableOutput('summary_table'),
               
@@ -78,14 +89,12 @@ shinyUI(fluidPage(theme = "bootstrap.css",
               htmlOutput('info_for_datatable'),
               dataTableOutput('data_table'),
               
-              br(),
-              leafletOutput('testplot'),
               hr(),
               downloadButton('download_subset_data', 'Download Spreadsheet of Selected Data')
             ),
             
             conditionalPanel(
-              condition = "input.data_type2 != 'Select DataType' &&  input.data_type == 'Select DataType' && (typeof input.data_type2 !== 'undefined')",
+              condition = "input.data_type2 != 'Select DataType' &&  input.data_type3 == 'Select DataType' && (typeof input.data_type2 !== 'undefined')",
              
               htmlOutput('data_type_info2'),
               htmlOutput("heading_summary2"),
@@ -104,7 +113,12 @@ shinyUI(fluidPage(theme = "bootstrap.css",
               
               tags$style(type="text/css", "#data_table2 table {border: medium solid #009900; font-size: 15px; font-family: 'Verdana'; border-collapse: collapse; text-align: center; margin-left: auto; margin-right: auto;}"),
               downloadButton('download_subset_data2', 'Download Spreadsheet of Selected Data')
-            )
+            ),
+            conditionalPanel(
+              condition = "input.data_type3 != 'Select DataType'",
+              leafletOutput('map_plot')
+              
+              )
           )        
           )                                   
   )  
